@@ -9,12 +9,11 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class Main extends Application {
     double x, y = 0;
     @Override
     public void start(Stage pStage) throws IOException {
-
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("viewAndController/AddProductView.fxml"));
         Parent root = fxmlLoader.load();
 
         pStage.initStyle(StageStyle.UNDECORATED);
