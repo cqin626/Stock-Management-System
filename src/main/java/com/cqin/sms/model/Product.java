@@ -1,21 +1,40 @@
 package com.cqin.sms.model;
 
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.SimpleBooleanProperty;
+
+import java.awt.*;
+
 public class Product {
-    private final String productID;
+    private int productID;
     private String productName;
     private String productCategory;
     private int remainingStock;
     private double unitPrice;
+//    private BooleanProperty remark;
 
-    public Product(String productID, String productName, String productCategory, int remainingStock, double unitPrice) {
+    public Product() {
+        productID = -1;
+    }
+
+    public Product(int productID, String productName, String productCategory, int remainingStock, double unitPrice) {
         this.productID = productID;
+        this.productName = productName;
+        this.productCategory = productCategory;
+        this.remainingStock = remainingStock;
+        this.unitPrice = unitPrice;
+        //this.remark = new SimpleBooleanProperty(false); // Initialize with false (unchecked)
+    }
+
+    public Product(String productName, String productCategory, int remainingStock, double unitPrice) {
         this.productName = productName;
         this.productCategory = productCategory;
         this.remainingStock = remainingStock;
         this.unitPrice = unitPrice;
     }
 
-    public String getProductID() {
+
+    public int getProductID() {
         return productID;
     }
 
@@ -50,6 +69,14 @@ public class Product {
     public void setUnitPrice(double unitPrice) {
         this.unitPrice = unitPrice;
     }
+
+//    public BooleanProperty remarkProperty() {
+//        return remark;
+//    }
+//
+//    public void setRemark(boolean remark) {
+//        this.remark.set(remark);
+//    }
 
     @Override
     public String toString() {

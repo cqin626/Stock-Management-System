@@ -9,8 +9,8 @@ module com.cqin.sms {
 
     opens com.cqin.sms to javafx.fxml;
     exports com.cqin.sms;
-    exports com.cqin.sms.viewAndController;
-    opens com.cqin.sms.viewAndController to javafx.fxml;
+    exports com.cqin.sms.controller;
+    opens com.cqin.sms.controller to javafx.fxml;
     exports com.cqin.sms.model;
     opens com.cqin.sms.model to javafx.fxml;
     exports com.cqin.sms.utility;

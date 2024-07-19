@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cqin.sms.controller.TestAddController">
+   <children>
+      <AnchorPane prefHeight="439.0" prefWidth="391.0" style="-fx-background-color: white; -fx-background-radius: 4%; -fx-border-radius: 4%;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="30.0">
+         <effect>
+            <DropShadow height="19.83" radius="10.875" spread="0.03" width="25.67">
+               <color>
+                  <Color opacity="0.35693007707595825" />
+               </color>
+            </DropShadow>
+         </effect>
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="50.0" prefWidth="688.0" text="Product Information">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="30.0" right="30.0" top="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="50.0" prefWidth="210.0" text="Product Name *" textAlignment="RIGHT">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="productNameTxtField" prefHeight="50.0" prefWidth="270.0" promptText="e.g., Samsung Galaxy S6">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="50.0" prefWidth="210.0" text="Product Category *" textAlignment="RIGHT">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="productCategoryTxtField" prefHeight="50.0" prefWidth="270.0" promptText="e.g., Mobile Phone">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="50.0" prefWidth="210.0" text="Unit Price *" textAlignment="RIGHT">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="unitPriceTxtField" prefHeight="50.0" prefWidth="270.0" promptText="e.g., 3999.99">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="50.0" prefWidth="210.0" text="Remaining Stock *" textAlignment="RIGHT">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="remainingStockTxtField" prefHeight="50.0" prefWidth="270.0" promptText="e.g., 10" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="clearButton" mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0" text="Clear">
+                           <HBox.margin>
+                              <Insets bottom="15.0" right="5.0" top="15.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="addButton" mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0" text="Add">
+                           <HBox.margin>
+                              <Insets bottom="15.0" left="5.0" right="5.0" top="15.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

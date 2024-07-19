@@ -9,18 +9,20 @@ import javafx.util.Duration;
 public class Sidebar {
     private final AnchorPane blockingPane;
     private final AnchorPane extendedSidePane;
+    private final AnchorPane borderLeftPane;
     private boolean slidedOut;
 
-    public Sidebar(AnchorPane blockingPane, AnchorPane extendedSidePane) {
+    public Sidebar(AnchorPane blockingPane, AnchorPane extendedSidePane, AnchorPane borderLeftPane) {
         this.blockingPane = blockingPane;
         this.extendedSidePane = extendedSidePane;
+        this.borderLeftPane = borderLeftPane;
         this.slidedOut = false;
 
         //Slides the blocking pane away when scene is loaded
         if(blockingPane != null && extendedSidePane != null) {
             blockingPane.setVisible(false);
             Sidebar.getFadeTransition(blockingPane, 0.25, 1, 0).play();
-            Sidebar.getTranslateTransition(extendedSidePane, 0.25, -600).play();
+            //Sidebar.getTranslateTransition(extendedSidePane, 0.25, -600).play();
         }
     }
 
@@ -38,19 +40,19 @@ public class Sidebar {
     }
 
     public void hideExtendedSideBar() {
-        FadeTransition trans = getFadeTransition(blockingPane, 0.25, 0.15,0);
+        FadeTransition trans = getFadeTransition(blockingPane, 0.005, 0.15,0);
         trans.play();
-        trans.setOnFinished( e2 -> {
-            blockingPane.setVisible(false);
-        });
-        getTranslateTransition(extendedSidePane,0.25, -600).play();
+        trans.setOnFinished(_ -> blockingPane.setVisible(false));
+        borderLeftPane.setMinWidth(60);
+        getTranslateTransition(extendedSidePane,0.005, -600).play();
         slidedOut = false;
     }
 
     private void showExtendedSideBar() {
         blockingPane.setVisible(true);
-        getFadeTransition(blockingPane, 0.25, 0, 0.8).play();
-        getTranslateTransition(extendedSidePane, 0.25, 600).play();
+        getFadeTransition(blockingPane, 0.005, 0, 0.8).play();
+        getTranslateTransition(extendedSidePane, 0.005, 600).play();
+        borderLeftPane.setMinWidth(190);
         slidedOut = true;
     }
 
@@ -59,5 +61,9 @@ public class Sidebar {
             hideExtendedSideBar();
         else
             showExtendedSideBar();
+    }
+
+    public boolean isSlidedOut(){
+        return slidedOut;
     }
 }
