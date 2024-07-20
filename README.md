@@ -26,7 +26,7 @@ Here's a walkthrough of implemented user stories:
 <img src='https://github.com/user-attachments/assets/daf54d73-97a1-4938-925f-e5e1c31b38c9' title='Delete operation' width='500' alt='Delete operation Walkthrough' />
 
 
-
+https://github.com/user-attachments/assets/daf54d73-97a1-4938-925f-e5e1c31b38c9
 
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
