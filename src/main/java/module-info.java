@@ -6,6 +6,7 @@ module com.cqin.sms {
     requires org.kordamp.bootstrapfx.core;
     requires java.sql;
     requires java.desktop;
+    requires static lombok;
 
     opens com.cqin.sms to javafx.fxml;
     exports com.cqin.sms;

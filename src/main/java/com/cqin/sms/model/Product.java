@@ -1,14 +1,17 @@
 package com.cqin.sms.model;
 
 import javafx.scene.control.CheckBox;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
 public class Product {
     private int productID;
-    private String productName;
-    private String productCategory;
-    private int remainingStock;
-    private double unitPrice;
-    private CheckBox checkBox;
+    private @Setter String productName;
+    private @Setter String productCategory;
+    private @Setter int remainingStock;
+    private @Setter double unitPrice;
+    private @Setter CheckBox checkBox;
 
     public Product() {
         //For searching purpose, a product with -1 id indicates that the product does not exist
@@ -32,62 +35,4 @@ public class Product {
         this.unitPrice = unitPrice;
         this.checkBox = new CheckBox();
     }
-
-
-    public int getProductID() {
-        return productID;
-    }
-
-    public String getProductName() {
-        return productName;
-    }
-
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
-
-    public String getProductCategory() {
-        return productCategory;
-    }
-
-    public void setProductCategory(String productCategory) {
-        this.productCategory = productCategory;
-    }
-
-    public int getRemainingStock() {
-        return remainingStock;
-    }
-
-    public void setRemainingStock(int remainingStock) {
-        this.remainingStock = remainingStock;
-    }
-
-    public double getUnitPrice() {
-        return unitPrice;
-    }
-
-    public void setUnitPrice(double unitPrice) {
-        this.unitPrice = unitPrice;
-    }
-
-    public CheckBox getCheckBox() {
-        return checkBox;
-    }
-
-    public void setCheckBox(CheckBox checkBox) {
-        this.checkBox = checkBox;
-    }
-
-    @Override
-    public String toString() {
-        return "Product{" +
-                "productID='" + productID + '\'' +
-                ", productName='" + productName + '\'' +
-                ", productCategory='" + productCategory + '\'' +
-                ", remainingStock=" + remainingStock +
-                ", unitPrice=" + unitPrice +
-                '}';
-    }
-
-
 }
