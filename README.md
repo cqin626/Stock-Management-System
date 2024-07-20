@@ -35,4 +35,4 @@ Here's a walkthrough of the implemented user stories:
    
 **3. Update product**
    
-   Uploading update.mp4…
+   https://github.com/user-attachments/assets/da3d1374-4764-4435-bac0-3a801a86151e
