@@ -22,8 +22,8 @@ The following **extensions** are implemented:
 * [x] Users are prevented from submitting empty forms or entering invalid values.
 
 ## Video Walkthrough
+Here's a walkthrough of the implemented user stories:
 
-Here's a walkthrough of the implemented user stories:\n
 **1. View and delete products**
 
    https://github.com/user-attachments/assets/3b7a3d14-d41b-4d2a-aa15-18937f611523
