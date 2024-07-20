@@ -23,7 +23,11 @@ The following **extensions** are implemented:
 
 Here's a walkthrough of implemented user stories:
 1. View and delete operations
-<img src='https://github.com/user-attachments/assets/8385dd70-887c-4769-9856-006fa83f2cbc' title='Delete operation' width='500' alt='Delete operation Walkthrough' />
+<img src='https://github.com/user-attachments/assets/daf54d73-97a1-4938-925f-e5e1c31b38c9' title='Delete operation' width='500' alt='Delete operation Walkthrough' />
+
+
+
+
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
