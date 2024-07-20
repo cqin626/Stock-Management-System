@@ -21,7 +21,7 @@ The following **extensions** are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of the implemented user stories:
+Here's a walkthrough of the implemented user stories:\n
 **1. View and delete products**
    
    https://github.com/user-attachments/assets/0f10c728-e50f-4a21-b6b6-3af3d7b90c7e
