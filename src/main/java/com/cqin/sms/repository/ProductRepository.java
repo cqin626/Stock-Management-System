@@ -94,4 +94,19 @@ public class ProductRepository {
             throw new RuntimeException("Database encountered an error");
         }
     }
+
+    public boolean deleteProducts(List<Integer> productIDs) {
+        String sql = "DELETE FROM product WHERE product_id = ?";
+        try(Connection connection = getConnectionToDB();
+            PreparedStatement preparedStatement = connection.prepareStatement(sql)
+        ) {
+            for(int productID : productIDs) {
+                preparedStatement.setInt(1, productID);
+                preparedStatement.executeUpdate();
+            }
+            return true;
+        } catch(SQLException sqle) {
+            throw new RuntimeException("Database encountered an error");
+        }
+    }
 }
