@@ -23,5 +23,13 @@ The following **extensions** are implemented:
 
 Here's a walkthrough of the implemented user stories:
 1. View and delete products
-   https://github.com/user-attachments/assets/daf54d73-97a1-4938-925f-e5e1c31b38c9
    
+
+https://github.com/user-attachments/assets/0f10c728-e50f-4a21-b6b6-3af3d7b90c7e
+
+
+2. Add product
+   https://github.com/user-attachments/assets/1db8e582-5325-42cf-b38e-f6070b538e6c
+   
+3. Update product
+   https://github.com/user-attachments/assets/7fcd9627-bea7-40e2-a2cb-51ae81e11dcb
