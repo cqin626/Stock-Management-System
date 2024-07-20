@@ -2,11 +2,8 @@ package com.cqin.sms.controller;
 
 import com.cqin.sms.model.Product;
 import com.cqin.sms.service.ProductService;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -14,11 +11,10 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class TestEditController implements Initializable {
+public class EditController implements Initializable {
 
     @FXML
     private TextField productNameTxtField;
@@ -46,7 +42,7 @@ public class TestEditController implements Initializable {
 
     //Should disable update button initially
 
-    public TestEditController() {
+    public EditController() {
         this.productService = new ProductService();
     }
 
@@ -67,10 +63,10 @@ public class TestEditController implements Initializable {
                 searchbar.setDisable(true);
                 updateButton.setDisable(false);
             } else {
-                TestMainController.getAlert(Alert.AlertType.ERROR, "Product ID not found.").showAndWait();
+                MainController.getAlert(Alert.AlertType.ERROR, "Product ID not found.").showAndWait();
             }
         } catch (RuntimeException re) {
-            TestMainController.getAlert(Alert.AlertType.ERROR, "Invalid product ID.").showAndWait();
+            MainController.getAlert(Alert.AlertType.ERROR, "Invalid product ID.").showAndWait();
         }
     };
 
@@ -80,7 +76,7 @@ public class TestEditController implements Initializable {
         try{
             initializeTable();
         } catch (RuntimeException re) {
-            TestMainController.getAlert(Alert.AlertType.ERROR,re.getMessage()).showAndWait();
+            MainController.getAlert(Alert.AlertType.ERROR,re.getMessage()).showAndWait();
         }
 
         // Enable search
@@ -96,16 +92,17 @@ public class TestEditController implements Initializable {
                 String remStock = remainingStockTxtField.getText();
 
                 if(productService.updateProduct(prodID, prodName, prodCategory,unitPrice,remStock)) {
-                    TestMainController.getAlert(Alert.AlertType.INFORMATION,"Changes on product are updated to database.").showAndWait();
+                    MainController.getAlert(Alert.AlertType.INFORMATION,"Changes on product are updated to database.").showAndWait();
                 } else {
-                    TestMainController.getAlert(Alert.AlertType.ERROR,"An error has occurred. Please try again later.").showAndWait();
+                    MainController.getAlert(Alert.AlertType.ERROR,"An error has occurred. Please try again later.").showAndWait();
                 }
             } catch (RuntimeException re) {
-                TestMainController.getAlert(Alert.AlertType.ERROR, re.getMessage()).showAndWait();
+                MainController.getAlert(Alert.AlertType.ERROR, re.getMessage()).showAndWait();
             }
             clearUserInputs();
         });
 
+        //Display the corresponding product details on the left pane when a particular row is selected
         productsTable.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
                 String prodID = Integer.toString(newValue.getProductID());
@@ -125,7 +122,6 @@ public class TestEditController implements Initializable {
                 updateButton.setDisable(false);
             }
         });
-
 
         //Disable update feature when nothing is searched
         updateButton.setDisable(true);

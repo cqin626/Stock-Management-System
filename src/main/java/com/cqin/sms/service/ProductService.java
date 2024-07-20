@@ -2,8 +2,6 @@ package com.cqin.sms.service;
 import com.cqin.sms.controller.InvalidInputException;
 import com.cqin.sms.model.Product;
 import com.cqin.sms.repository.ProductRepository;
-import java.sql.SQLException;
-import java.util.Arrays;
 import java.util.List;
 
 public class ProductService {
@@ -45,6 +43,10 @@ public class ProductService {
             //prodID is verified as a valid ID before been passed to this function
             return productRepository.updateProduct(new Product(Integer.parseInt(prodID), prodName, prodCat, Integer.parseInt(remStock), Double.parseDouble(unitPrice)));
         }
+    }
+
+    public boolean deleteProducts(List<Integer> productIDs) throws RuntimeException {
+        return productRepository.deleteProducts(productIDs);
     }
 
     private boolean isValidProdID(String prodID) {

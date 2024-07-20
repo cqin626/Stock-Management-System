@@ -1,15 +1,13 @@
 package com.cqin.sms.controller;
 
-import com.cqin.sms.model.Product;
 import com.cqin.sms.service.ProductService;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import java.net.URL;
-import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class TestAddController implements Initializable {
+public class AddController implements Initializable {
     @FXML
     private TextField productNameTxtField;
     @FXML
@@ -22,7 +20,7 @@ public class TestAddController implements Initializable {
     private Button addButton, clearButton;
     ProductService productService;
 
-    public TestAddController() {
+    public AddController() {
         this.productService = new ProductService();
     }
 
@@ -38,12 +36,12 @@ public class TestAddController implements Initializable {
                 String remStock = remainingStockTxtField.getText();
 
                 if(productService.addProduct(prodName, prodCategory,unitPrice,remStock)) {
-                    TestMainController.getAlert(Alert.AlertType.INFORMATION,"Product successfully inserted to database.").showAndWait();
+                    MainController.getAlert(Alert.AlertType.INFORMATION,"Product successfully inserted to database.").showAndWait();
                 } else {
-                    TestMainController.getAlert(Alert.AlertType.ERROR,"An error has occurred. Please try again later.").showAndWait();
+                    MainController.getAlert(Alert.AlertType.ERROR,"An error has occurred. Please try again later.").showAndWait();
                 }
             } catch (RuntimeException re) {
-                TestMainController.getAlert(Alert.AlertType.ERROR, re.getMessage()).showAndWait();
+                MainController.getAlert(Alert.AlertType.ERROR, re.getMessage()).showAndWait();
             }
             clearUserInputs();
         });

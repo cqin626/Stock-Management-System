@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
 
-<AnchorPane prefHeight="500.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cqin.sms.controller.TestEditController">
+<AnchorPane prefHeight="500.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cqin.sms.controller.EditController">
    <children>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -38,7 +38,7 @@
                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                        </HBox.margin>
                                     </TextField>
-                                    <ImageView fx:id="search" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="search" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
                                        <image>
                                           <Image url="@../img/search.png" />
                                        </image>
@@ -106,12 +106,12 @@
                               </HBox>
                               <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <Button fx:id="clearButton" mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0" text="Clear">
+                                    <Button fx:id="clearButton" mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0" style="-fx-cursor: hand;" text="Clear">
                                        <HBox.margin>
                                           <Insets bottom="15.0" right="5.0" top="15.0" />
                                        </HBox.margin>
                                     </Button>
-                                    <Button fx:id="updateButton" mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0" text="Update">
+                                    <Button fx:id="updateButton" mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0" style="-fx-cursor: hand;" text="Update">
                                        <HBox.margin>
                                           <Insets bottom="15.0" left="5.0" right="5.0" top="15.0" />
                                        </HBox.margin>

@@ -9,13 +9,13 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cqin.sms.controller.TestMainController">
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cqin.sms.controller.MainController">
    <top>
       <AnchorPane prefHeight="60.0" prefWidth="800.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
          <children>
             <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="800.0">
                <children>
-                  <ImageView fx:id="menu" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="menu" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
                      <image>
                         <Image url="@../img/burgerMenu.png" />
                      </image>
@@ -35,13 +35,13 @@
                <children>
                   <VBox layoutX="0.6000000000000001" layoutY="-0.8" prefHeight="200.0" prefWidth="130.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Button fx:id="goToHomeButton" mnemonicParsing="false" prefHeight="45.0" prefWidth="130.0" text="Home">
+                        <Button fx:id="goToHomeButton" mnemonicParsing="false" prefHeight="45.0" prefWidth="130.0" style="-fx-background-color: none; -fx-cursor: hand;" text="Home">
                            <VBox.margin>
                               <Insets top="20.0" />
                            </VBox.margin>
                         </Button>
-                        <Button fx:id="goToAddButton" mnemonicParsing="false" prefHeight="45.0" prefWidth="130.0" text="Add Product" />
-                        <Button fx:id="goToEditButton" mnemonicParsing="false" prefHeight="45.0" prefWidth="130.0" text="Edit Product" />
+                        <Button fx:id="goToAddButton" mnemonicParsing="false" prefHeight="45.0" prefWidth="130.0" style="-fx-background-color: none; -fx-cursor: hand;" text="Add Product" />
+                        <Button fx:id="goToEditButton" mnemonicParsing="false" prefHeight="45.0" prefWidth="130.0" style="-fx-background-color: none; -fx-cursor: hand;" text="Edit Product" />
                      </children>
                   </VBox>
                </children>
@@ -50,7 +50,7 @@
                <children>
                   <VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="60.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <ImageView fx:id="goToHomeImgView" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="goToHomeImgView" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
                            <VBox.margin>
                               <Insets top="20.0" />
                            </VBox.margin>
@@ -58,12 +58,12 @@
                               <Image url="@../img/home.png" />
                            </image>
                         </ImageView>
-                        <ImageView fx:id="goToAddImgView" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="goToAddImgView" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
                            <image>
                               <Image url="@../img/add.png" />
                            </image>
                         </ImageView>
-                        <ImageView fx:id="goToEditImgView" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="goToEditImgView" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
                            <image>
                               <Image url="@../img/pen.png" />
                            </image>

@@ -2,11 +2,9 @@ package com.cqin.sms.controller;
 
 import com.cqin.sms.Main;
 import com.cqin.sms.utility.Sidebar;
-import javafx.collections.ListChangeListener;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
@@ -15,9 +13,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 
-public class TestMainController implements Initializable {
+public class MainController implements Initializable {
 
     @FXML
     private ImageView menu, goToHomeImgView, goToAddImgView, goToEditImgView;
@@ -35,7 +32,7 @@ public class TestMainController implements Initializable {
 
         //Load home view into content pane
         try {
-            loadPane("view/TestHomeView.fxml");
+            loadPane("view/HomeView.fxml");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -49,7 +46,7 @@ public class TestMainController implements Initializable {
         //Initialize the navigation feature of icons
         goToHomeImgView.setOnMouseClicked( _ -> {
             try {
-                loadPane("view/TestHomeView.fxml");
+                loadPane("view/HomeView.fxml");
                 if(sidebar.isSlidedOut()) sidebar.hideExtendedSideBar();
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
@@ -58,7 +55,7 @@ public class TestMainController implements Initializable {
 
         goToAddImgView.setOnMouseClicked( _ -> {
             try {
-                loadPane("view/TestAddView.fxml");
+                loadPane("view/AddView.fxml");
                 if(sidebar.isSlidedOut()) sidebar.hideExtendedSideBar();
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
@@ -67,7 +64,7 @@ public class TestMainController implements Initializable {
 
         goToEditImgView.setOnMouseClicked( _ -> {
             try {
-                loadPane("view/TestEditView.fxml");
+                loadPane("view/EditView.fxml");
                 if(sidebar.isSlidedOut()) sidebar.hideExtendedSideBar();
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
@@ -77,7 +74,7 @@ public class TestMainController implements Initializable {
         //Initialize the navigation feature of buttons
         goToHomeButton.setOnAction( _ -> {
             try {
-                loadPane("view/TestHomeView.fxml");
+                loadPane("view/HomeView.fxml");
                 sidebar.hideExtendedSideBar();
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
@@ -86,7 +83,7 @@ public class TestMainController implements Initializable {
 
         goToAddButton.setOnAction( _ -> {
             try {
-                loadPane("view/TestAddView.fxml");
+                loadPane("view/AddView.fxml");
                 sidebar.hideExtendedSideBar();
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
@@ -95,7 +92,7 @@ public class TestMainController implements Initializable {
 
         goToEditButton.setOnAction( _ -> {
             try {
-                loadPane("view/TestEditView.fxml");
+                loadPane("view/EditView.fxml");
                 sidebar.hideExtendedSideBar();
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
