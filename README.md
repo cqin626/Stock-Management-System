@@ -1,52 +1,32 @@
 # Stock Management System
 
-A simple stock management system created using java and javafx that enables user to perform simple CRUD operations and supports data persistence via MySQL.
+A simple stock management system created using Java and JavaFX that enables users to perform basic CRUD operations and supports data persistence via MySQL.
 
-Time spent: **20** hours spent in total
+Time spent: **20 hours** in total
 
 ## Functionality
 
-The following **essential** functionality is completed:
+The following **essential** functionalities are completed:
 
-* [x] User can view the current products in inventory
-* [x] User can add a product
-* [x] User can search for a product and perform update to the product
-* [x] User can select multiple products to perform deletion
+* [x] Users can view the current products in the inventory.
+* [x] Users can add a product.
+* [x] Users can search for a product and update it.
+* [x] Users can select multiple products for deletion.
 
 The following **extensions** are implemented:
 
-* [x] User can navigate different screens via a sidebar that can be extended
-* [x] Results from search on the home screen are reflected immediately without
-* [x] User is prohibited to submit an empty form or give invalid values
+* [x] Users can navigate different screens via an expandable sidebar.
+* [x] Search results on the home screen are updated immediately as the user provides input, without needing a search button.
+* [x] Users are prevented from submitting empty forms or entering invalid values.
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
-1. View and delete operations
-<img src='https://github.com/user-attachments/assets/daf54d73-97a1-4938-925f-e5e1c31b38c9' title='Delete operation' width='500' alt='Delete operation Walkthrough' />
-
-
-https://github.com/user-attachments/assets/daf54d73-97a1-4938-925f-e5e1c31b38c9
-
-
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
-
-## Notes
-
-Describe any challenges encountered while building the app.
-
-## License
-
-    Copyright [yyyy] [name of copyright owner]
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-        http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+Here's a walkthrough of the implemented user stories:
+1. View and delete products
+   https://github.com/user-attachments/assets/daf54d73-97a1-4938-925f-e5e1c31b38c9
+   
+2. Add product
+   https://github.com/user-attachments/assets/1db8e582-5325-42cf-b38e-f6070b538e6c
+   
+3. Update product
+   https://github.com/user-attachments/assets/7fcd9627-bea7-40e2-a2cb-51ae81e11dcb
