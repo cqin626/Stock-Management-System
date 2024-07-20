@@ -1,5 +1,3 @@
-
-https://github.com/user-attachments/assets/e15f3f8e-f77b-41da-8190-3414f61e6bc4
 # Stock Management System
 
 A simple stock management system created using Java and JavaFX that enables users to perform basic CRUD operations and supports data persistence via MySQL.
